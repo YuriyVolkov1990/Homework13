@@ -3,9 +3,6 @@ public class Main {
         PersonService personService = new PersonService();
         Person sarah = new Person("Sarah", 30);
         if (personService.isAdult(sarah)) {
-
-        }
-        if (sarah.isAdult()) {
             System.out.println("Иди в бар");
         } else {
             System.out.println("Иди в школу");
