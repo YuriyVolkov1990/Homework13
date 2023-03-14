@@ -7,6 +7,10 @@ public class Person {
         this.age = age;
     }
 
+    public String toString() {
+        return "Имя " + this.name + " Возраст " + this.age;
+    }
+
     public boolean isAdult() {
         return this.getAge() > 18;
             }
