@@ -7,6 +7,6 @@ public class Main {
             System.out.println("Иди в школу");
         }
         System.out.println(sarah);
-        sarah.setAge(-30);
+        sarah.increaseAge(-30);
     }
 }

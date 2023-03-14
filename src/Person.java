@@ -24,10 +24,10 @@ public class Person {
     public int getAge() {
         return this.age;
     }
-    public void setAge(int age) {
-        if (age < 0) {
-            throw new IllegalArgumentException("Возраст не может быть меньше нуля");
+    public void increaseAge(int increment) {
+        if (increment < 0) {
+            throw new IllegalArgumentException("Инкремент не может быть меньше нуля");
         }
-        this.age = age;
+        this.age = age + increment;
     }
 }
