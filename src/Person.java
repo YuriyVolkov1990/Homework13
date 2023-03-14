@@ -6,6 +6,11 @@ public class Person {
         this.name = name;
         this.age = age;
     }
+
+    public boolean isAdult() {
+        return this.getAge() > 18;
+            }
+
     public String getName() {
         return name;
     }
