@@ -12,7 +12,7 @@ public class Person {
     }
 
     public boolean isAdult() {
-        return this.getAge() > 18;
+        return getAge() > 18;
             }
 
     public String getName() {
@@ -25,6 +25,9 @@ public class Person {
         return this.age;
     }
     public void setAge(int age) {
+        if (age < 0) {
+            throw new IllegalArgumentException("Возраст не может быть меньше нуля");
+        }
         this.age = age;
     }
 }
