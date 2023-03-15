@@ -15,4 +15,5 @@ public class Main {
         book.setYearPublishing(2023);
         System.out.println("Новый год публикации: " + book.getYearPublishing());
     }
+
 }
