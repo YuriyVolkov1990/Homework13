@@ -7,12 +7,6 @@ public class Author {
         this.authorName = authorName;
         this.authorSurname = authorSurname;
     }
-    //public String getAuthorName() {
-        //return authorName;
-    //}
-    //public String getAuthorSurname() {
-        //return authorSurname;
-    //}
     @Override
     public String toString() {
         return authorName + " " + authorSurname;
