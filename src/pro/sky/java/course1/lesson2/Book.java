@@ -1,30 +1,43 @@
 package pro.sky.java.course1.lesson2;
-
+import java.util.Objects;
 public class Book {
-    private String bookName;
-    private Author authorFullName;
+    private final String bookName;
+    private final Author authorFullName;
     private int yearPublishing;
 
     public Book(String bookName, Author authorFullName, int yearPublishing) {
         this.bookName = bookName;
         this.authorFullName = authorFullName;
         this.yearPublishing = yearPublishing;
-
     }
-
     public Author getAuthorFullName() {
         return authorFullName;
     }
 
     public String getBookName() {
-        return this.bookName;
+        return bookName;
     }
-
     public int getYearPublishing() {
-        return this.yearPublishing;
+        return yearPublishing;
     }
-
     public void setYearPublishing(int yearPublishing) {
         this.yearPublishing = yearPublishing;
+    }
+    @Override
+    public String toString() {
+        return getAuthorFullName().toString();
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Book book = (Book) o;
+        return yearPublishing == book.yearPublishing && bookName.equals(book.bookName) && authorFullName.equals(book.authorFullName);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(yearPublishing, bookName, authorFullName);
     }
 }
