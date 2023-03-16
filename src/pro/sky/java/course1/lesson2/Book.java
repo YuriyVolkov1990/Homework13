@@ -27,15 +27,17 @@ public class Book {
     public String toString() {
         return getAuthorFullName().toString();
     }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Book book = (Book) o;
-        return Objects.equals(bookName, book.bookName);
+        return yearPublishing == book.yearPublishing && bookName.equals(book.bookName) && authorFullName.equals(book.authorFullName);
     }
+
     @Override
     public int hashCode() {
-        return Objects.hash(bookName);
+        return Objects.hash(yearPublishing, bookName, authorFullName);
     }
 }

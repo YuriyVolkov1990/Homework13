@@ -19,7 +19,7 @@ public class Author {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Author author = (Author) o;
-        return authorName.equals(author.authorName) || authorSurname.equals(author.authorSurname);
+        return authorName.equals(author.authorName) && authorSurname.equals(author.authorSurname);
     }
 
     @Override
